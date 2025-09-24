@@ -1,24 +1,17 @@
-import Footer from "./componentes/footer/index";
-import Header from "./componentes/header/index";
+import { Route, Routes } from "react-router-dom";
 import Home from "./paginas/home/home";
-import Sidebar from "./componentes/sidebar/index";
-
-
-
+import Login from "./paginas/home/login";
+import LayoutAdmin from "./componentes/LayoutAdmin";
+ 
 function AppRoutes() {
     return (
-      <>
-        <Header />
-        <div className="d-flex">
-          <Sidebar />
-          <div className="flex-grow-1 p-4">
-            <Home />
-          </div>
-        </div>
-        <Footer />
-      </>
+        <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route element={<LayoutAdmin />}>
+                <Route path="/" element={<Home />} />
+            </Route>
+        </Routes>
     );
-  }
-  
+}
 
 export default AppRoutes;

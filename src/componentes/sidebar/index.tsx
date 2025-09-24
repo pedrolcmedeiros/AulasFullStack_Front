@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Sidebar() {
 
     return (
@@ -29,7 +31,10 @@ function Sidebar() {
                 <a href="/usuario" className="text-white text-decoration-none d-block px-2 py-1 rounded">Usuário</a>
               </li>
               <li>
-                <a href="/carrinho" className="text-white text-decoration-none d-block px-2 py-1 rounded">Carrinho</a>
+                <Link to="/usuario" className="text-white text-decoration-none d-block px-2 py-1 rounded">Usuário</Link>
+              </li>
+              <li>
+                <Link to="/carrinho" className="text-white text-decoration-none d-block px-2 py-1 rounded">Carrinho</Link>
               </li>
             </ul>
           </li>

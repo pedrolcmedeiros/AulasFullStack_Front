@@ -1,5 +1,3 @@
-
-
 function Home() {
     return (
       <main className="container mt-5">
